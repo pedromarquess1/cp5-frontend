@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Melodia — Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --orange: #f97316;
+            --orange-100: #fff4eb;
+            --green: #16a34a;
+            --green-100: #ecfbef;
+            --text: #0f172a;
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: var(--text)
+        }
+
+        /* Simplified, professional look: fewer shadows, more whitespace, consistent accents */
+        .accent-gradient {
+            background: linear-gradient(90deg, var(--orange), var(--green));
+        }
+
+        .accent-border {
+            border-left: 4px solid var(--orange)
+        }
+    </style>
+</head>
+
+<body>
+
+    <body class="bg-white text-gray-800 leading-relaxed">
+        <header id="site-header" class="fixed w-full top-0 z-30">
+            <nav class="max-w-6xl mx-auto flex items-center justify-between p-3 md:p-4 bg-white border-b">
+                <a href="#hero" class="flex items-center gap-3">
+                    <div
+                        class="w-9 h-9 rounded-sm bg-[var(--orange)] flex items-center justify-center text-white font-semibold">
+                        M</div>
+                    <span class="font-medium text-base">Melodia</span>
+                </a>
+                <ul class="hidden md:flex items-center gap-6 text-sm">
+                    <li><a href="#features" class="text-sm text-gray-700 hover:text-[var(--orange)]">Funcionalidades</a>
+                    </li>
+                    <li><a href="#testimonials" class="text-sm text-gray-700 hover:text-[var(--orange)]">Depoimentos</a>
+                    </li>
+                    <li><a href="#contact" class="text-sm text-gray-700 hover:text-[var(--orange)]">Contato</a></li>
+                </ul>
+                <a href="#"
+                    class="hidden md:inline-block px-4 py-2 rounded-sm text-white bg-gradient-to-r from-[var(--orange)] to-[var(--green)]">Ouvir
+                    Agora</a>
+                <button id="menu-btn" class="md:hidden text-xl"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+        </header>
+
+        <main class="pt-24">
+            <!-- Hero -->
+            <section id="hero" class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-semibold mb-3">Melodia — Sua música em destaque</h1>
+                    <p class="text-base text-gray-600 mb-5">Plataforma para descobrir artistas, criar playlists e ouvir
+                        com qualidade. Interface direta e fácil de usar.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="px-5 py-2 bg-[var(--orange)] text-white rounded-sm font-medium">Ouvir
+                            Agora</a>
+                        <a href="#features" class="px-5 py-2 border border-gray-200 rounded-sm text-gray-700">Saiba
+                            Mais</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div
+                        class="w-full max-w-md h-56 bg-[var(--orange-100)] rounded-md flex items-center justify-center text-gray-400">
+                        Imagem do app (substituir)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apresentação / Benefícios -->
+            <section id="features" class="py-10">
+                <div class="max-w-6xl mx-auto px-6">
+                    <h2 class="text-xl font-semibold mb-5">Diferenciais</h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-5 bg-white rounded-sm border-l-4 border-[var(--orange)]">
+                            <div class="text-[var(--orange)] text-2xl mb-2"><i
+                                    class="fa-solid fa-headphones-simple"></i></div>
+                            <h3 class="font-medium mb-1">Qualidade de som</h3>
+                            <p class="text-sm text-gray-600">Áudio claro com presets para diferentes estilos.</p>
+                        </div>
+                        <div class="p-5 bg-white rounded-sm border-l-4 border-[var(--green)]">
+                            <div class="text-[var(--green)] text-2xl mb-2"><i class="fa-solid fa-list-music"></i></div>
+                            <h3 class="font-medium mb-1">Playlists</h3>
+                            <p class="text-sm text-gray-600">Criação e compartilhamento simples de playlists.</p>
+                        </div>
+                        <div class="p-5 bg-white rounded-sm border-l-4 border-[var(--orange)]">
+                            <div class="text-[var(--orange)] text-2xl mb-2"><i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h3 class="font-medium mb-1">Descoberta</h3>
+                            <p class="text-sm text-gray-600">Recomendações baseadas no seu histórico de escuta.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Funcionalidades -->
+            <section id="functionalities" class="py-8">
+                <div class="max-w-6xl mx-auto px-6">
+                    <h2 class="text-xl font-semibold mb-4">Funcionalidades</h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-sm border">
+                            <h4 class="font-medium mb-1">Player inteligente</h4>
+                            <p class="text-sm text-gray-600">Controles, equalizador e temporizador.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-sm border">
+                            <h4 class="font-medium mb-1">Integração social</h4>
+                            <p class="text-sm text-gray-600">Compartilhe e descubra músicas de amigos.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-sm border">
+                            <h4 class="font-medium mb-1">Modo offline</h4>
+                            <p class="text-sm text-gray-600">Ouça sem conexão ao baixar faixas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Depoimentos -->
+            <section id="testimonials" class="py-8 bg-[var(--green-100)]">
+                <div class="max-w-4xl mx-auto px-6 text-center">
+                    <h2 class="text-xl font-semibold mb-4">Depoimentos</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-sm border">
+                            <p class="text-sm text-gray-700">"Melodia me ajudou a descobrir novos artistas — interface
+                                simples e ótima qualidade."</p>
+                            <footer class="mt-2 text-xs text-gray-500">— João, 22</footer>
+                        </div>
+                        <div class="p-4 bg-white rounded-sm border">
+                            <p class="text-sm text-gray-700">"Criei playlists para todas as ocasiões, super prático."
+                            </p>
+                            <footer class="mt-2 text-xs text-gray-500">— Maria, 19</footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato -->
+            <section id="contact" class="py-8">
+                <div class="max-w-2xl mx-auto px-6">
+                    <h2 class="text-xl font-semibold mb-3">Contato</h2>
+                    <p class="text-sm text-gray-600 mb-3">Deixe seu e-mail para receber novidades.</p>
+                    <form class="grid grid-cols-1 gap-3"
+                        onsubmit="event.preventDefault(); alert('Obrigado! (substitua pelo backend)')">
+                        <input type="email" required placeholder="seu@email.com"
+                            class="w-full p-2 rounded-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--green)]" />
+                        <textarea placeholder="Mensagem (opcional)"
+                            class="w-full p-2 rounded-sm border border-gray-200 h-20"></textarea>
+                        <div class="flex gap-3">
+                            <button type="submit"
+                                class="px-4 py-2 bg-gradient-to-r from-[var(--orange)] to-[var(--green)] text-white rounded-sm">Enviar</button>
+                            <button type="reset" class="px-4 py-2 border rounded-sm">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Rodapé -->
+            <footer class="py-6 border-t mt-8">
+                <div
+                    class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-600">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-sm bg-[var(--orange)] flex items-center justify-center text-white font-medium">
+                            M</div>
+                        <div>
+                            <div class="font-medium">Melodia</div>
+                            <div class="text-xs text-gray-500">© 2026 Prof. Lucas Sousa</div>
+                        </div>
+                    </div>
+                    <div>Privacidade • Suporte</div>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            // Menu background change on scroll
+            const header = document.getElementById('site-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) header.querySelector('nav').classList.add('bg-white', 'shadow-md');
+                else header.querySelector('nav').classList.remove('bg-white', 'shadow-md');
+            });
+        </script>
+    </body>
+
+</html>
+</body>
+
+</html>
