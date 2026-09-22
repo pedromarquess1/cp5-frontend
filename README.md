@@ -12,17 +12,13 @@ Desenvolver uma página estática (Landing Page) que apresente o aplicativo Melo
 - Google Fonts (Inter)
 - JavaScript (pequenas interações)
 
-## Padrão de cores
-- Laranja: `#f97316`
-- Verde: `#16a34a`
-
 ## Observações para apresentação
 - Explique as decisões técnicas: estrutura HTML, uso de Tailwind, responsividade e script para menu com transparência.
 - Destaque o uso de ícones do Font Awesome e a organização das seções.
 
 ## Integrantes
-- Pedro H. Marques 
-- Raphael de Oliveira
-- Renan Queiroz
-- Evandro Marcondes
+- Pedro H. Marques - RM569307
+- Raphael de Oliveira - RM571065
+- Renan Queiroz - RM569077
+- Evandro Marcondes - RM572473
 
