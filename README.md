@@ -8,13 +8,14 @@ Desenvolvimento de uma Landing Page que apresente o aplicativo Melodia, suas fun
 ## Funcionalidades
 - Uso do Spotify para reproduzir a prévia das músicas em destaque
 - Seção de contatos para suporte
+- Apreentação de artista mais escutados
 
 ## Tecnologias
-- HTML5
-- CSS3 (Tailwind via CDN)
-- Font Awesome (CDN)
-- Google Fonts (Inter)
-- JavaScript (pequenas interações)
+- HTML
+- Tailwind Css
+- Font Awesome 
+- Google Fonts 
+- JavaScript
 
 
 ## Integrantes
