@@ -143,7 +143,7 @@
                             class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
                             <div
                                 class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FDE7D5] text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
-                                <i class="fa-solid fa-list-music"></i>
+                                <i class="fa-solid fa-folder-open"></i>
                             </div>
                             <h4 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Playlists</h4>
                             <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Organize suas músicas de
@@ -167,77 +167,46 @@
                     <h3 class="mb-4 text-lg font-semibold text-[#1D2B23] dark:text-white">Músicas</h3>
                     <div class="grid gap-4 md:grid-cols-3">
                         <article
-                            class="song-card cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
-                            tabindex="0" data-track="1" aria-label="Ela Partiu - Tim Maia">
-                            <div class="mb-4 flex items-center gap-3">
-                                <div
-                                    class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">Ela Partiu</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Tim Maia</p>
-                                </div>
+                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
+                            tabindex="0" data-track="3" aria-label="Os Muleke é liso - Mc Rodolfinho">
+                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
+                                <iframe 
+                                    data-testid="embed-iframe" style="border-radius:12px" 
+                                    src="https://open.spotify.com/embed/track/1xSlu5kLxdXCMQuRUxjiVe?utm_source=generator&si=2aa047d89b8145db" 
+                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+                                    fullscreen; picture-in-picture" loading="lazy">
+                            </iframe>
                             </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Clássico com groove e
-                                presença.</p>
+                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Um clássico do soul brasileiro com groove marcante e nostalgia profunda.</p>
+                        </article>
+                            
+                        <article
+                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
+                            tabindex="0" data-track="3" aria-label="Os Muleke é liso - Mc Rodolfinho">
+                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
+                                <iframe 
+                                    data-testid="embed-iframe" style="border-radius:12px" 
+                                    src="https://open.spotify.com/embed/track/6OmKF6WW3eQtZzGQ4hDSOX?utm_source=generator&si=d6558597bd72419b" 
+                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+                                    fullscreen; picture-in-picture" loading="lazy">
+                                </iframe>
+                            </div>
+                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">A essência do funk ostentação com rima rápida, presença e energia pura.</p>
                         </article>
 
                         <article
-                            class="song-card cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
-                            tabindex="0" data-track="2" aria-label="Os Muleke é Liso - Mc Rodolfinho">
-                            <div class="mb-4 flex items-center gap-3">
-                                <div
-                                    class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FDE7D5] text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">Os Moleque é Liso</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Mc Rodolfinho</p>
-                                </div>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Energia forte e ritmo
-                                direto.</p>
-                        </article>
-
-                        <article
-                            class="song-card cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
+                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
                             tabindex="0" data-track="3" aria-label="Ai Se Eu Te Pego - Michel Teló">
-                            <div class="mb-4 flex items-center gap-3">
-                                <div
-                                    class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">Ai Se Eu Te Pego</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Michel Teló</p>
-                                </div>
+                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
+                                <iframe 
+                                    data-testid="embed-iframe" style="border-radius:12px" 
+                                    src="https://open.spotify.com/embed/track/1g2TstaKy626gIEtfIiSQB?utm_source=generator&si=3e91febf684448b6" 
+                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+                                    fullscreen; picture-in-picture" loading="lazy">
+                                </iframe>
                             </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Hit com levada vibrante.</p>
+                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">O hit chiclete e contagiante que levou o sertanejo universitário para o mundo.</p>
                         </article>
-                    </div>
-
-                    <div
-                        class="mt-6 rounded-2xl border border-[#D6EADC] bg-[#F4FBF6] p-4 dark:border-[#203E31] dark:bg-[#10241D]">
-                        <div class="mb-3 flex items-center justify-between gap-3">
-                            <div>
-                                <p class="text-[10px] uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">
-                                    Player</p>
-                                <h4 id="player-title" class="text-base font-semibold text-[#1D2B23] dark:text-white">
-                                    Ouça agora</h4>
-                            </div>
-                            <span id="player-state" class="text-xs text-[#51665A] dark:text-[#CFEBD8]">Pronto</span>
-                        </div>
-
-                        <div
-                            class="mb-3 overflow-hidden rounded-xl border border-[#D6EADC] bg-white p-2 dark:border-[#2B3F36] dark:bg-[#0D1715]">
-                            <audio id="fallback-audio" controls class="w-full" preload="none"></audio>
-                        </div>
-                    </div>
-
-                    <div id="song-message"
-                        class="mt-6 rounded-2xl border border-[#CCE5D6] bg-[#EAF7EE] px-4 py-3 text-sm text-[#194F39] dark:border-[#2A4A3F] dark:bg-[#17352C] dark:text-[#EAF7EE]">
-                        Clique em Ouvir agora mesmo para escitar nossas músicas.
                     </div>
                 </section>
 

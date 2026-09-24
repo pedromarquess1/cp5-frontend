@@ -1,9 +1,13 @@
 # Melodia — Landing Page
 
-Projeto de check-point: Landing Page para o app Melodia.
+- Projeto desenvolvido para o check-point de frontend
 
 ## Objetivo
-Desenvolver uma página estática (Landing Page) que apresente o aplicativo Melodia, suas funcionalidades, diferenciais e um formulário de contato.
+Desenvolvimento de uma Landing Page que apresente o aplicativo Melodia, suas funcionalidades, diferenciais e um formulário de contato.
+
+## Funcionalidades
+- Uso do Spotify para reproduzir a prévia das músicas em destaque
+- Seção de contatos para suporte
 
 ## Tecnologias
 - HTML5
@@ -12,9 +16,6 @@ Desenvolver uma página estática (Landing Page) que apresente o aplicativo Melo
 - Google Fonts (Inter)
 - JavaScript (pequenas interações)
 
-## Observações para apresentação
-- Explique as decisões técnicas: estrutura HTML, uso de Tailwind, responsividade e script para menu com transparência.
-- Destaque o uso de ícones do Font Awesome e a organização das seções.
 
 ## Integrantes
 - Pedro H. Marques - RM569307
