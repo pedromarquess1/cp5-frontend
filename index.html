@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Melodia é uma landing page acadêmica sobre descoberta musical, playlists e curadoria personalizada." />
     <title>Melodia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,299 +14,352 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: "class"
-        }
+        tailwind.config = { darkMode: "class" }
     </script>
 </head>
 
 <body class="bg-[#F5F7F2] text-[#1F2A22] antialiased dark:bg-[#070807] dark:text-[#EDF7F1]">
-    <div class="mx-auto max-w-7xl px-4 py-6 lg:px-6">
-        <div class="grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-            <aside class="lg:sticky lg:top-6 lg:self-start">
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-6">
+            <a href="#top" class="flex items-center gap-3" aria-label="Ir para o topo da página">
                 <div
+                    class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5FAE78] text-lg font-bold text-white shadow-sm">
+                    M</div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#647167] dark:text-[#D7F3DC]">Melodia</p>
+                    <span class="text-sm font-semibold text-[#1D2B23] dark:text-white">Discover</span>
+                </div>
+            </a>
+
+            <nav aria-label="Navegação principal" class="hidden items-center gap-6 md:flex">
+                <a href="#features"
+                    class="text-sm font-medium text-[#33463A] transition hover:text-[#2F7E58] dark:text-[#E9F5EE]">Funcionalidades</a>
+                <a href="#music"
+                    class="text-sm font-medium text-[#33463A] transition hover:text-[#2F7E58] dark:text-[#E9F5EE]">Músicas</a>
+                <a href="#testimonials"
+                    class="text-sm font-medium text-[#33463A] transition hover:text-[#2F7E58] dark:text-[#E9F5EE]">Depoimentos</a>
+                <a href="contact.html"
+                    class="text-sm font-medium text-[#33463A] transition hover:text-[#2F7E58] dark:text-[#E9F5EE]">Contato</a>
+                <a href="privacidade.html"
+                    class="text-sm font-medium text-[#33463A] transition hover:text-[#2F7E58] dark:text-[#E9F5EE]">Privacidade</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <button id="theme-toggle" type="button" aria-label="Alternar tema"
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5EAE3] bg-white/70 text-[#3B2E2D] shadow-sm transition hover:bg-[#F1E2D9] dark:border-[#2B3F36] dark:bg-[#1A2F27] dark:text-[#F5C98D] dark:hover:bg-[#233F35]">
+                    <i class="fa-solid fa-moon block dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                </button>
+
+                <button id="nav-toggle" type="button" aria-label="Abrir menu de navegação"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#E5EAE3] bg-white/70 text-[#1D2B23] shadow-sm md:hidden dark:border-[#2B3F36] dark:bg-[#1A2F27] dark:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" aria-label="Menu móvel"
+            class="hidden border-t border-[#E5EAE3] bg-white/95 px-4 py-4 shadow-sm backdrop-blur-md dark:border-[#1D2F27] dark:bg-[#0F1A13]/95 md:hidden">
+            <div class="flex flex-col gap-2">
+                <a href="#features"
+                    class="rounded-lg px-3 py-2 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">Funcionalidades</a>
+                <a href="#music"
+                    class="rounded-lg px-3 py-2 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">Músicas</a>
+                <a href="#testimonials"
+                    class="rounded-lg px-3 py-2 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">Depoimentos</a>
+                <a href="contact.html"
+                    class="rounded-lg px-3 py-2 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">Contato</a>
+                <a href="privacidade.html"
+                    class="rounded-lg px-3 py-2 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">Privacidade</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top" class="mx-auto max-w-7xl px-4 pb-10 pt-28 lg:px-6">
+        <section id="hero"
+            class="mb-10 rounded-3xl border border-[#E5EAE3] bg-white p-6 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+            <div class="grid items-center gap-6 md:grid-cols-[1.5fr_1fr]">
+                <div>
+                    <p
+                        class="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#2F7E58] dark:text-[#9AD9B4]">
+                        Melodia</p>
+                    <h1 class="text-3xl font-semibold leading-tight text-[#1D2B23] dark:text-white md:text-5xl">A música
+                        certa no momento certo.</h1>
+                    <p class="mt-4 max-w-xl text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA] md:text-base">Descubra
+                        artistas, organize playlists e transforme o seu dia com uma experiência musical que entende seu
+                        ritmo.</p>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="#music"
+                            class="rounded-xl bg-[#5FAE78] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#4D9C66] focus:outline-none focus:ring-2 focus:ring-[#9FD7B3]">Ouvir
+                            agora</a>
+                        <a href="#features"
+                            class="rounded-xl border border-[#E5EAE3] bg-[#F9F3EE] px-5 py-3 text-sm font-medium text-[#3A3D3B] transition hover:bg-[#F5E9D9] focus:outline-none focus:ring-2 focus:ring-[#9FD7B3] dark:border-[#2B3F36] dark:bg-[#162E28] dark:text-[#EAF7EE] dark:hover:bg-[#1B3931]">Ver
+                            recursos</a>
+                    </div>
+                </div>
+
+                <div
+                    class="rounded-2xl bg-[#F3A866] p-5 text-[#2A180E] shadow-sm dark:bg-[#C86D2D] dark:text-[#FCEFE2]">
+                    <div class="flex items-center gap-4">
+                        <div class="relative">
+                            <div class="absolute inset-0 -z-10 scale-110 rounded-2xl bg-white/20"></div>
+                            <img src="images/partiuTiotioTim.jpg" alt="Capa da música Ela Partiu de Tim Maia"
+                                class="h-28 w-28 rounded-2xl object-cover shadow-md md:h-32 md:w-32" />
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.2em] text-[#6D3A19] dark:text-[#F5D4AA]">Destaque
+                            </p>
+                            <h2 class="mt-3 text-2xl font-semibold">Ela Partiu</h2>
+                            <p class="mt-1 text-sm text-[#5B3217] dark:text-[#F7DAB0]">Tim Maia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-10">
+            <h2 class="mb-4 text-xl font-semibold text-[#1D2B23] dark:text-white">Funcionalidades</h2>
+            <div class="grid gap-4 md:grid-cols-3">
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div
+                        class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                    </div>
+                    <h3 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Qualidade de som</h3>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Experiência imersiva com áudio limpo
+                        e playlists organizadas para cada momento.</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div
+                        class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FDE7D5] text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h3 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Playlists personalizadas
+                    </h3>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Monte estados de espírito, rotinas e
+                        momentos do dia com organização simples e visual.</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div
+                        class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E8F6EC] text-[#3C7A5C] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Descoberta inteligente</h3>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Encontre artistas e sons que
+                        combinam com seus gostos sem perder tempo na navegação.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="music" class="mb-10">
+            <h2 class="mb-4 text-xl font-semibold text-[#1D2B23] dark:text-white">Músicas</h2>
+            <div class="grid gap-4 md:grid-cols-3">
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-4 overflow-hidden rounded-xl">
+                        <iframe style="border-radius: 12px"
+                            src="https://open.spotify.com/embed/track/1xSlu5kLxdXCMQuRUxjiVe?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Uma combinação de groove e nostalgia
+                        para criar uma atmosfera intensa e memorável.</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-4 overflow-hidden rounded-xl">
+                        <iframe style="border-radius: 12px"
+                            src="https://open.spotify.com/embed/track/6OmKF6WW3eQtZzGQ4hDSOX?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Energia pura e presença marcante,
+                        ideal para momentos dinâmicos e com muita atitude.</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-4 overflow-hidden rounded-xl">
+                        <iframe style="border-radius: 12px"
+                            src="https://open.spotify.com/embed/track/1g2TstaKy626gIEtfIiSQB?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Um clássico contagiante, perfeito
+                        para além do volume da música e da energia da celebração.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="featured-artists" class="mb-10">
+            <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">Descobrir</p>
+                    <h2 class="mt-1 text-xl font-semibold text-[#1D2B23] dark:text-white">Artistas em destaque</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <article
                     class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                    <div class="mb-6 flex items-center gap-3">
+                    <div class="mb-4 overflow-hidden rounded-xl bg-[#F3A866] sm:h-44">
+                        <img src="./images/mano-brown.jpg" alt="Mano Brown" class="h-40 w-full object-cover sm:h-44" />
+                    </div>
+                    <h3 class="text-base font-semibold text-[#1D2B23] dark:text-white">Mano Brown</h3>
+                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Rap</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-4 overflow-hidden rounded-xl bg-[#B8DDBE] sm:h-44">
+                        <img src="./images/michael.jpg" alt="Michael Jackson"
+                            class="h-40 w-full object-cover sm:h-44" />
+                    </div>
+                    <h3 class="text-base font-semibold text-[#1D2B23] dark:text-white">Michael Jackson</h3>
+                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Pop</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-4 overflow-hidden rounded-xl bg-[#D9C5E8] sm:h-44">
+                        <img src="./images/pericles.jpg" alt="Pericles" class="h-40 w-full object-cover sm:h-44" />
+                    </div>
+                    <h3 class="text-base font-semibold text-[#1D2B23] dark:text-white">Pericles</h3>
+                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Samba</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="testimonials" class="mb-10">
+            <h3 class="mb-4 text-lg font-semibold text-[#1D2B23] dark:text-white">Depoimentos</h3>
+            <div class="grid gap-4 md:grid-cols-3">
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-3 flex items-center gap-3">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E3F5E9] text-sm font-semibold text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
+                            JD</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1D2B23] dark:text-white">@jackdaniel</h4>
+                            <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Ex-jogador de futebol</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Mano, o bagulho tá completamente
+                        premium, o programador que fez isso aqui estava com o prime ativado.”</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-3 flex items-center gap-3">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FDE7D5] text-sm font-semibold text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
+                            DJ</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1D2B23] dark:text-white">@Djavan</h4>
+                            <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Cantor e Compositor</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Isso não é só tecnologia, é o
+                        avesso do avesso do bonito. Tem uma harmonia que parece música, uma cor que não se
+                        explica.”</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div class="mb-3 flex items-center gap-3">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8F6EC] text-sm font-semibold text-[#3C7A5C] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
+                            RR</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1D2B23] dark:text-white">@RichardRasmussen</h4>
+                            <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Biólogo</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Me lembrou a pororoca, um fênomeno
+                        histórico do planeta.”</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-[#E5EAE3] bg-[#F2F6F2] dark:border-[#1D2F27] dark:bg-[#0B120D]">
+        <div class="mx-auto max-w-7xl px-4 py-10 lg:px-6">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <div class="mb-3 flex items-center gap-3">
                         <div
                             class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5FAE78] text-lg font-bold text-white">
                             M</div>
                         <div>
-                            <p class="text-[10px] uppercase tracking-[0.2em] text-[#647167] dark:text-[#D7F3DC]">Portal
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-[#647167] dark:text-[#D7F3DC]">Melodia
                             </p>
-                            <h2 class="text-lg font-semibold text-[#1D2B23] dark:text-white">Melodia</h2>
+                            <h3 class="text-lg font-semibold text-[#1D2B23] dark:text-white">Sua trilha perfeita</h3>
                         </div>
                     </div>
-
-                    <nav class="space-y-2">
-                        <a href="#features"
-                            class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">
-                            <span
-                                class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1D3A2E] dark:text-[#DDFBEF]"><i
-                                    class="fa-solid fa-music"></i></span>
-                            Funcionalidades
-                        </a>
-                        <a href="#music"
-                            class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">
-                            <span
-                                class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1D3A2E] dark:text-[#DDFBEF]"><i
-                                    class="fa-solid fa-compact-disc"></i></span>
-                            Músicas
-                        </a>
-                        <a href="#testimonials"
-                            class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">
-                            <span
-                                class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1D3A2E] dark:text-[#DDFBEF]"><i
-                                    class="fa-solid fa-comments"></i></span>
-                            Depoimentos
-                        </a>
-                        <a href="contact.html"
-                            class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-[#33463A] transition hover:bg-[#EAF7EE] dark:text-[#E9F5EE] dark:hover:bg-[#17352C]">
-                            <span
-                                class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1D3A2E] dark:text-[#DDFBEF]"><i
-                                    class="fa-solid fa-envelope"></i></span>
-                            Contato
-                        </a>
-                    </nav>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Descubra músicas, curadoria
+                        inteligente e uma experiência musical mais humana.</p>
                 </div>
-            </aside>
 
-            <main>
-                <header
-                    class="mb-8 flex items-center justify-between rounded-2xl border border-[#E5EAE3] bg-white px-4 py-3 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                    <div>
-                        <p class="text-xs uppercase tracking-[0.2em] text-[#647167] dark:text-[#D7F3DC]">Explorar</p>
-                        <h1 class="mt-1 text-xl font-semibold text-[#1D2B23] dark:text-white">Biblioteca de sons</h1>
+                <div>
+                    <h3
+                        class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">
+                        Links rápidos</h3>
+                    <ul class="space-y-2 text-sm text-[#495D52] dark:text-[#E4F4EA]">
+                        <li><a href="#features" class="transition hover:text-[#2F7E58]">Funcionalidades</a></li>
+                        <li><a href="#music" class="transition hover:text-[#2F7E58]">Músicas</a></li>
+                        <li><a href="#testimonials" class="transition hover:text-[#2F7E58]">Depoimentos</a></li>
+                        <li><a href="contact.html" class="transition hover:text-[#2F7E58]">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3
+                        class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">
+                        Contato</h3>
+                    <ul class="space-y-2 text-sm text-[#495D52] dark:text-[#E4F4EA]">
+                        <li><a href="mailto:contato@melodia.demo"
+                                class="transition hover:text-[#2F7E58]">contato@melodia.demo</a></li>
+                        <li><a href="tel:+5511999999999" class="transition hover:text-[#2F7E58]">+55 (11) 99999-9999</a>
+                        </li>
+                        <li><a href="privacy.html" class="transition hover:text-[#2F7E58]">Política de Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3
+                        class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">
+                        Redes sociais</h3>
+                    <div class="flex gap-3 text-lg text-[#2F7E58] dark:text-[#9AD9B4]">
+                        <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#DDE7E0] bg-white transition hover:border-[#5FAE78] hover:text-[#4D9C66] dark:border-[#2B3F36] dark:bg-[#11251E]"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#DDE7E0] bg-white transition hover:border-[#5FAE78] hover:text-[#4D9C66] dark:border-[#2B3F36] dark:bg-[#11251E]"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#DDE7E0] bg-white transition hover:border-[#5FAE78] hover:text-[#4D9C66] dark:border-[#2B3F36] dark:bg-[#11251E]"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
+                </div>
+            </div>
 
-                    <button id="theme-toggle" type="button" aria-label="Alternar tema"
-                        class="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5EAE3] bg-[#F7F2EE] text-[#3B2E2D] hover:bg-[#F1E2D9] dark:border-[#2B3F36] dark:bg-[#1A2F27] dark:text-[#F5C98D] dark:hover:bg-[#233F35]">
-                        <i class="fa-solid fa-moon block dark:hidden"></i>
-                        <i class="fa-solid fa-sun hidden dark:block"></i>
-                    </button>
-                </header>
-
-                <section id="hero"
-                    class="mb-10 rounded-3xl border border-[#E5EAE3] bg-white p-6 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                    <div class="grid items-center gap-6 md:grid-cols-[1.5fr_1fr]">
-                        <div>
-                            <p
-                                class="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#2F7E58] dark:text-[#9AD9B4]">
-                                Melodia</p>
-                            <h2 class="text-3xl font-semibold leading-tight text-[#1D2B23] dark:text-white md:text-4xl">
-                                A música certa no momento certo.</h2>
-                            <p class="mt-4 max-w-xl text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Descubra sons,
-                                organize playlists e encontre trilhas que acompanhem o seu ritmo diário.</p>
-
-                            <div class="mt-6 flex flex-wrap gap-3">
-                                <a href="#music"
-                                    class="rounded-xl bg-[#5FAE78] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#4D9C66]">Ouvir
-                                    agora</a>
-                                <a href="#features"
-                                    class="rounded-xl border border-[#E5EAE3] bg-[#F9F3EE] px-5 py-2.5 text-sm font-medium text-[#3A3D3B] hover:bg-[#F5E9D9] dark:border-[#2B3F36] dark:bg-[#162E28] dark:text-[#EAF7EE] dark:hover:bg-[#1B3931]">Ver
-                                    recursos</a>
-                            </div>
-                        </div>
-
-                        <div
-                            class="rounded-2xl bg-[#F3A866] p-5 text-[#2A180E] shadow-sm dark:bg-[#C86D2D] dark:text-[#FCEFE2]">
-                            <div class="flex items-center gap-4">
-                                <div class="relative">
-                                    <div class="absolute inset-0 -z-10 scale-110 rounded-2xl bg-white/20 animate-pulse">
-                                    </div>
-                                    <img src="images/partiuTiotioTim.jpg" alt="Capa do álbum de Ela Partiu"
-                                        class="h-28 w-28 rounded-2xl object-cover shadow-md animate-bounce" />
-                                </div>
-                                <div>
-                                    <p class="text-xs uppercase tracking-[0.2em] text-[#6D3A19] dark:text-[#F5D4AA]">
-                                        Destaque</p>
-                                    <h3 class="mt-3 text-2xl font-semibold">Ela Partiu</h3>
-                                    <p class="mt-1 text-sm text-[#5B3217] dark:text-[#F7DAB0]">Tim Maia</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="features" class="mb-10">
-                    <h3 class="mb-4 text-lg font-semibold text-[#1D2B23] dark:text-white">Funcionalidades</h3>
-                    <div class="grid gap-4 md:grid-cols-3">
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div
-                                class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E3F5E9] text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                <i class="fa-solid fa-headphones-simple"></i>
-                            </div>
-                            <h4 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Som limpo</h4>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Áudio nítido e foco em cada
-                                faixa.</p>
-                        </article>
-
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div
-                                class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FDE7D5] text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
-                                <i class="fa-solid fa-folder-open"></i>
-                            </div>
-                            <h4 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Playlists</h4>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Organize suas músicas de
-                                forma simples.</p>
-                        </article>
-
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div
-                                class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E8F6EC] text-[#3C7A5C] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <h4 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Descoberta</h4>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Sugestões claras e alinhadas
-                                ao seu gosto.</p>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="music" class="mb-10">
-                    <h3 class="mb-4 text-lg font-semibold text-[#1D2B23] dark:text-white">Músicas</h3>
-                    <div class="grid gap-4 md:grid-cols-3">
-                        <article
-                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
-                            tabindex="0" data-track="3" aria-label="Os Muleke é liso - Mc Rodolfinho">
-                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
-                                <iframe 
-                                    data-testid="embed-iframe" style="border-radius:12px" 
-                                    src="https://open.spotify.com/embed/track/1xSlu5kLxdXCMQuRUxjiVe?utm_source=generator&si=2aa047d89b8145db" 
-                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
-                                    fullscreen; picture-in-picture" loading="lazy">
-                            </iframe>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Um clássico do soul brasileiro com groove marcante e nostalgia profunda.</p>
-                        </article>
-                            
-                        <article
-                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
-                            tabindex="0" data-track="3" aria-label="Os Muleke é liso - Mc Rodolfinho">
-                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
-                                <iframe 
-                                    data-testid="embed-iframe" style="border-radius:12px" 
-                                    src="https://open.spotify.com/embed/track/6OmKF6WW3eQtZzGQ4hDSOX?utm_source=generator&si=d6558597bd72419b" 
-                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
-                                    fullscreen; picture-in-picture" loading="lazy">
-                                </iframe>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">A essência do funk ostentação com rima rápida, presença e energia pura.</p>
-                        </article>
-
-                        <article
-                            class="song-card min-w-0 cursor-pointer rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#7AB68E] dark:border-[#1D2F27] dark:bg-[#0F1A13]"
-                            tabindex="0" data-track="3" aria-label="Ai Se Eu Te Pego - Michel Teló">
-                            <div class="mb-4 min-w-0 overflow-hidden rounded-xl">
-                                <iframe 
-                                    data-testid="embed-iframe" style="border-radius:12px" 
-                                    src="https://open.spotify.com/embed/track/1g2TstaKy626gIEtfIiSQB?utm_source=generator&si=3e91febf684448b6" 
-                                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
-                                    fullscreen; picture-in-picture" loading="lazy">
-                                </iframe>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">O hit chiclete e contagiante que levou o sertanejo universitário para o mundo.</p>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="featured-artists" class="mb-10">
-                    <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
-                        <div>
-                            <p class="text-[10px] uppercase tracking-[0.2em] text-[#2F7E58] dark:text-[#9AD9B4]">Descobrir</p>
-                            <h3 class="mt-1 text-lg font-semibold text-[#1D2B23] dark:text-white">Artistas em destaque</h3>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        <article class="min-w-0 rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-4 flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#F3A866] text-[#5B3217] sm:h-44">
-                                    <img src="./images/mano-brown.jpg" alt="Mano Brown">
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="min-w-0">
-                                    <h4 class="truncate text-base font-semibold text-[#1D2B23] dark:text-white">Mano Brown</h4>
-                                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Rap</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="min-w-0 rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-4 flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#B8DDBE] text-[#24563A] sm:h-44">
-                                <img src="./images/michael.jpg" alt="Michael Jackson">
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="min-w-0">
-                                    <h4 class="truncate text-base font-semibold text-[#1D2B23] dark:text-white">Michael Jackson</h4>
-                                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Pop</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="min-w-0 rounded-2xl border border-[#E5EAE3] bg-white p-4 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-4 flex h-40 items-center justify-center overflow-hidden rounded-xl bg-[#D9C5E8] text-[#593A70] sm:h-44">
-                                <img src="./images/pericles.jpg" alt="Pericles">
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="min-w-0">
-                                    <h4 class="truncate text-base font-semibold text-[#1D2B23] dark:text-white">Pericles</h4>
-                                    <p class="mt-1 text-sm text-[#67766B] dark:text-[#D9E9E0]">Samba</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="testimonials" class="mb-10">
-                    <h3 class="mb-4 text-lg font-semibold text-[#1D2B23] dark:text-white">Depoimentos</h3>
-                    <div class="grid gap-4 md:grid-cols-3">
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-3 flex items-center gap-3">
-                                <div
-                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E3F5E9] text-sm font-semibold text-[#2E7B5A] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                    JD</div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">@jackdaniel</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Ex-jogador de futebol</p>
-                                </div>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Mano, o bagulho tá completamente premium, o programador que fez isso aqui estava com o prime ativado.”</p>
-                        </article>
-
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-3 flex items-center gap-3">
-                                <div
-                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FDE7D5] text-sm font-semibold text-[#B5621E] dark:bg-[#3B271A] dark:text-[#F8D7B4]">
-                                    DJ</div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">@Djavan</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Cantor e Compositor</p>
-                                </div>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Isso não é só tecnologia, é o avesso do avesso do bonito. Tem uma harmonia que parece música, uma cor que não se
-                            explica.”</p>
-                        </article>
-
-                        <article
-                            class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
-                            <div class="mb-3 flex items-center gap-3">
-                                <div
-                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8F6EC] text-sm font-semibold text-[#3C7A5C] dark:bg-[#1A3B2D] dark:text-[#DFFBEF]">
-                                    RR</div>
-                                <div>
-                                    <h4 class="font-semibold text-[#1D2B23] dark:text-white">@RichardRasmussen</h4>
-                                    <p class="text-xs text-[#67766B] dark:text-[#D9E9E0]">Biólogo</p>
-                                </div>
-                            </div>
-                            <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">“Me lembrou a pororoca, um fênomeno histórico do planeta.”</p>
-                        </article>
-                    </div>
-                </section>
-            </main>
+            <div
+                class="mt-8 border-t border-[#E5EAE3] pt-5 text-sm text-[#495D52] dark:border-[#1D2F27] dark:text-[#E4F4EA]">
+                <p>© 2026 Melodia. Projeto acadêmico e demonstrativo para fins de estudo.</p>
+            </div>
         </div>
-    </div>
-    
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
