@@ -32,13 +32,6 @@ Apresentar a proposta do produto com foco em usabilidade, identidade visual cons
 - script.js: interações, tema, scroll e validações
 - images/: imagens locais e recursos visuais do projeto
 
-## Como executar
-Para visualizar o projeto localmente, basta abrir o arquivo index.html diretamente no navegador ou utilizar um servidor local simples, como:
-
-python -m http.server 8000
-
-Depois acesse http://localhost:8000
-
 ## Responsividade
 O layout foi pensado para funcionar em mobile, tablet e desktop, com ajustes de espaçamento, navegação e embeds garantindo boa leitura e usabilidade em telas menores.
 
