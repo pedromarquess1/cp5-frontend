@@ -120,7 +120,7 @@
 
         <section id="features" class="mb-10">
             <h2 class="mb-4 text-xl font-semibold text-[#1D2B23] dark:text-white">Funcionalidades</h2>
-            <div class="grid gap-4 md:grid-cols-3">
+            <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 <article
                     class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
                     <div
@@ -153,6 +153,17 @@
                     <h3 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Descoberta inteligente</h3>
                     <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Encontre artistas e sons que
                         combinam com seus gostos sem perder tempo na navegação.</p>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-[#E5EAE3] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                    <div
+                        class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#F7F4EE] text-[#7A5B2F] dark:bg-[#30281B] dark:text-[#F5D49B]">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="mb-2 text-base font-semibold text-[#1D2B23] dark:text-white">Interface intuitiva</h3>
+                    <p class="text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Encontre suas músicas, playlists e
+                        artistas favoritos de forma rápida e simples.</p>
                 </article>
             </div>
         </section>
@@ -294,6 +305,38 @@
                 </article>
             </div>
         </section>
+
+        <section id="newsletter" class="mb-10">
+            <div
+                class="rounded-3xl border border-[#E5EAE3] bg-white p-6 shadow-sm dark:border-[#1D2F27] dark:bg-[#0F1A13]">
+                <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                    <div>
+                        <p
+                            class="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#2F7E58] dark:text-[#9AD9B4]">
+                            Newsletter</p>
+                        <h2 class="text-2xl font-semibold leading-tight text-[#1D2B23] dark:text-white">Novas
+                            descobertas direto na sua playlist</h2>
+                        <p class="mt-3 text-sm leading-6 text-[#495D52] dark:text-[#E4F4EA]">Receba novidades,
+                            lançamentos e recomendações do Melodia.</p>
+                    </div>
+
+                    <form id="newsletter-form" class="space-y-3" novalidate>
+                        <label for="newsletter-email"
+                            class="block text-sm font-medium text-[#2F413A] dark:text-[#F0F7F1]">E-mail</label>
+                        <div class="flex flex-col gap-3 sm:flex-row">
+                            <input id="newsletter-email" name="email" type="email" required
+                                placeholder="seu@email.com"
+                                class="w-full rounded-xl border border-[#E5EAE3] bg-white px-3 py-3 text-[#2F413A] placeholder:text-[#8A9A8F] focus:border-[#5FAE78] focus:outline-none focus:ring-2 focus:ring-[#9FD7B3] dark:border-[#2B3F36] dark:bg-[#11251E] dark:text-white dark:placeholder:text-[#94A99B]" />
+                            <button type="submit"
+                                class="rounded-xl bg-[#5FAE78] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#4D9C66] focus:outline-none focus:ring-2 focus:ring-[#9FD7B3] sm:shrink-0">Quero
+                                receber novidades</button>
+                        </div>
+                        <p id="newsletter-message" class="min-h-[1.5rem] text-sm text-[#495D52] dark:text-[#E4F4EA]"
+                            aria-live="polite">Demonstração acadêmica: nenhum e-mail é armazenado.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="border-t border-[#E5EAE3] bg-[#F2F6F2] dark:border-[#1D2F27] dark:bg-[#0B120D]">
@@ -335,7 +378,7 @@
                                 class="transition hover:text-[#2F7E58]">contato@melodia.demo</a></li>
                         <li><a href="tel:+5511999999999" class="transition hover:text-[#2F7E58]">+55 (11) 99999-9999</a>
                         </li>
-                        <li><a href="privacy.html" class="transition hover:text-[#2F7E58]">Política de Privacidade</a>
+                        <li><a href="privacidade.html" class="transition hover:text-[#2F7E58]">Política de Privacidade</a>
                         </li>
                     </ul>
                 </div>

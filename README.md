@@ -28,7 +28,7 @@ Apresentar a proposta do produto com foco em usabilidade, identidade visual cons
 ## Estrutura
 - index.html: página principal da landing page
 - contact.html: página de contato com formulário de suporte
-- privacy.html: política de privacidade acadêmica
+- privacidade.html: política de privacidade acadêmica
 - script.js: interações, tema, scroll e validações
 - images/: imagens locais e recursos visuais do projeto
 
